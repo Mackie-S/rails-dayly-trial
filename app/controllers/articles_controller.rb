@@ -6,6 +6,7 @@ class ArticlesController < ApplicationController
   end
 
   def index
+    raise StandardError
     @articles = Article.all
   end
 
@@ -21,7 +22,7 @@ class ArticlesController < ApplicationController
     if @article.save
       redirect_to article_path(@article), notice: '保存できたよ'
     else
-      flash.now[:error] = "保存できませんでした"
+      flash.now[:error] = '保存できませんでした'
       # NOTE: Rails 7ではstatus: :unprocessable_entityを入れる必要がある
       render :new, status: :unprocessable_entity
     end
