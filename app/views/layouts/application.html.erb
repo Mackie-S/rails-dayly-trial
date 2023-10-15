@@ -19,13 +19,14 @@
             <%= image_tag 'back.svg', class: 'header_back' %>
           <% end %>
         <% end %>
-        <p class="header_pageTitle">BlogApp</p>
+        <%= link_to 'BlogApp', root_path %>
       </div>
       <% if user_signed_in? %>
         <div class="dropdown">
           <%= image_tag current_user.avatar_image, class: 'header_avatar dropbtn' %>
           <div class="dropdown-content">
             <%= link_to 'プロフィール', profile_path %>
+            <%= link_to 'お気に入り', favorites_path %>
             <%= link_to 'ログアウト', destroy_user_session_path, data:{turbo_method: :delete} %>
           </div>
         </div>
