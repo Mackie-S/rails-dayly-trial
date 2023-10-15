@@ -180,6 +180,7 @@ GEM
     parser (3.2.2.4)
       ast (~> 2.4.1)
       racc
+    pg (1.5.4)
     pry (0.14.2)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -275,7 +276,6 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
-    sqlite3 (1.6.6-arm64-darwin)
     stimulus-rails (1.2.2)
       railties (>= 6.0.0)
     stringio (3.0.8)
@@ -320,6 +320,7 @@ DEPENDENCIES
   faker
   importmap-rails
   jbuilder
+  pg (>= 0.18, < 2.0)
   pry-byebug
   puma (~> 5.0)
   rails (~> 7.0.8)
@@ -328,7 +329,6 @@ DEPENDENCIES
   sassc-rails
   selenium-webdriver
   sprockets-rails
-  sqlite3 (~> 1.4)
   stimulus-rails
   turbo-rails
   tzinfo-data
